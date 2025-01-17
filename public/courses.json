@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Web Development Bootcamp",
+      "description": "Learn HTML, CSS, JavaScript, and React from scratch to build responsive websites.",
+      "teacher": "John Doe",
+      "price": 99.99,
+      "image": "https://i.ibb.co.com/VJmRpS0/webdev.png"
+    },
+    {
+      "title": "Data Science with Python",
+      "description": "Master data analysis, visualization, and machine learning using Python.",
+      "teacher": "Jane Smith",
+      "price": 129.99,
+      "image": "https://i.ibb.co.com/Q9JxZqQ/DSP.jpg"
+    },
+    {
+      "title": "Graphic Design Fundamentals",
+      "description": "Explore design principles and tools like Adobe Photoshop and Illustrator.",
+      "teacher": "Emily Johnson",
+      "price": 89.99,
+      "image": "https://i.ibb.co.com/jHgvHk5/graphic.webp"
+    },
+    {
+      "title": "Digital Marketing Strategies",
+      "description": "Learn SEO, social media marketing, and Google Ads to boost online presence.",
+      "teacher": "Michael Brown",
+      "price": 109.99,
+      "image": "https://i.ibb.co.com/dWwj2ww/digital-marketing.jpg"
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "Create iOS and Android apps using Flutter and Dart.",
+      "teacher": "William Davis",
+      "price": 149.99,
+      "image": "https://i.ibb.co.com/mT4PGsp/app-dev.png"
+    },
+    {
+      "title": "Cybersecurity Essentials",
+      "description": "Understand network security, encryption, and ethical hacking techniques.",
+      "teacher": "Sophia Wilson",
+      "price": 139.99,
+      "image": "https://i.ibb.co.com/RPrH2yM/cyber.png"
+    }
+  ]
+  

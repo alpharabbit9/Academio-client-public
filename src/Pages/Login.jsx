@@ -4,7 +4,7 @@
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { FaGoogle } from "react-icons/fa6";
 import './Backgound/LoginBack.css'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProivder";
 import Swal from "sweetalert2";
@@ -13,6 +13,7 @@ export function Login() {
 
   const {setUser,createGoogleUser,UserLogIn} = useContext(AuthContext)
   const navigate = useNavigate()
+  const location = useLocation();
 
   const handleLogin = (e) =>{
 
@@ -34,7 +35,7 @@ export function Login() {
         showConfirmButton: false,
         timer: 1500
       });
-      navigate('/')
+      navigate(location?.state ? location.state : "/")
     })
     .catch(error =>{
       console.log(error.message);
@@ -54,6 +55,7 @@ export function Login() {
         showConfirmButton: false,
         timer: 1500
       });
+      navigate(location?.state ? location.state : "/")
     })
     .catch(error =>{
       console.log(error.message);

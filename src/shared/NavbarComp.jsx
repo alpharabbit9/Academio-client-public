@@ -46,7 +46,7 @@ export function NavbarComp() {
         <NavLink>
           <Navbar.Link href="#">Teach on Acadmia</Navbar.Link>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/dashboard'}>
           <Navbar.Link href="#">Dashboard</Navbar.Link>
         </NavLink>
 
