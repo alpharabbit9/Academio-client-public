@@ -74,8 +74,8 @@ const AdminDashboard = () => {
 
                 </ul>
             </div>
-            <div className='p-7'>
-                <h2 className="text-5xl font-bold text-center">Admin Dashboard</h2>
+            <div className='p-7 flex-1'>
+                <h2 className="text-5xl font-bold text-center ">Admin Dashboard</h2>
                 <div className="divider w-full"></div>
                 <Outlet />
             </div>
