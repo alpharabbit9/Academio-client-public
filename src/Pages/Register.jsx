@@ -8,12 +8,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProivder";
 import { useContext } from "react";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 
 export function Register() {
 
   const {createUser ,setUser ,updateUserProfile, createGoogleUser} = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate() ;
+  const axiosPublic = useAxiosPublic();
+  // const reset = form.reset();
 
 
   const HandleGoogle = () =>{
@@ -22,13 +25,28 @@ export function Register() {
     .then(res =>{
       console.log(res.user)
       setUser(res.user);
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Welcome Back",
-        showConfirmButton: false,
-        timer: 1500
-      });
+      const userInfo = {
+        name : res.user?.displayName,
+        email:res.user?.email,
+        image :res.user?.photoURL
+      }
+
+      axiosPublic.post('/users', userInfo)
+      .then(res =>{
+        console.log(res.data)
+        navigate('/');
+        if(res.data.insertedId)
+        {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Welcome Back",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      })
+      
     })
     .catch(error =>{
       console.log(error.message);
@@ -55,14 +73,34 @@ export function Register() {
           setUser(res.user);
           updateUserProfile({displayName : name , photoURL : photo})
           .then(res =>{
-            navigate('/');
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "Welcome Back",
-              showConfirmButton: false,
-              timer: 1500
-            });
+            
+            const info = {
+              name : name,
+              email:email,
+              image :res.user?.photoURL
+            }
+            // Store user in the data base
+            axiosPublic.post('/users',info)
+            .then(res =>{
+              console.log(res.data)
+              if(res.data.insertedId)
+              {
+                console.log('user added to the database')
+                // reset();
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "Welcome Back",
+                  showConfirmButton: false,
+                  timer: 1500
+                });
+                navigate('/');
+
+              }
+            })
+            
+            
+           
           })
           .catch(error =>{
             console.log(error.message)

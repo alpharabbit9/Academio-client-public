@@ -5,7 +5,7 @@ export const axiosSecure = axios.create({
 })
 const useAxiosSecure = () => {
 
-    return axiosPublic;
+    return axiosSecure;
     
 };
 

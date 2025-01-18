@@ -7,7 +7,7 @@ import  './CSS/Background.css'
 const DownloadApp = () => {
     return (
         <section className="relative background min-h-40 py-24 px-20">
-            <h1>anything</h1>
+            
             {/* Background Overlay */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
 
