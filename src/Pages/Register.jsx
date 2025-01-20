@@ -71,6 +71,7 @@ export function Register() {
         .then(res =>{
           // console.log(res.user);
           setUser(res.user);
+          navigate('/')
           updateUserProfile({displayName : name , photoURL : photo})
           .then(res =>{
             

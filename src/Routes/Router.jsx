@@ -15,6 +15,7 @@ import TeacherRequests from '../Pages/Dashboard/TeacherRequests';
 import Users from '../Pages/Dashboard/Users';
 import AllAdminClasses from '../Pages/Dashboard/AllAdminClasses';
 import AdminProfile from '../Pages/Dashboard/AdminProfile';
+import TeacherForm from '../Pages/Home/TeacherForm';
 
 const Router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
                 path: 'register',
                 element: <Register></Register>
             },
+            {
+                path:'teacherForm',
+                element:<TeacherForm></TeacherForm>
+            }
 
         ]
     },

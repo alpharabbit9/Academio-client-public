@@ -1,5 +1,6 @@
 import React from "react";
 import teacher from "../../assets/Partners/teacher.png";
+import { Link } from "react-router-dom";
 
 const JoinAsTeacher = () => {
     return (
@@ -26,9 +27,11 @@ const JoinAsTeacher = () => {
                             Share your knowledge with students worldwide. We provide the tools
                             and platform to help you teach with ease.
                         </p>
-                        <button className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-                            Start Teaching Today
-                        </button>
+                        <Link to={'/teacherForm'}>
+                            <button className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                                Start Teaching Today
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
