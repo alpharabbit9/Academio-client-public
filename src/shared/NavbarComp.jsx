@@ -2,7 +2,7 @@
 "use client";
 
 import { Button, Navbar } from "flowbite-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import img from '../assets/pngtree-book-clipart-png-image_9043539.png'
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProivder";
@@ -11,6 +11,7 @@ import { Dropdown } from "flowbite-react";
 export function NavbarComp() {
 
   const { user, userLogOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
 
   return (
@@ -25,7 +26,10 @@ export function NavbarComp() {
             <>
              <img className="w-11 rounded-full mr-3" src={user?.photoURL} alt="" />
 
-              <Button onClick={userLogOut}>Logout</Button>
+              <Button onClick={() =>{
+                userLogOut();
+                navigate('/')
+              }}>Logout</Button>
             </>
             :
             <Link to={'/login'}>
@@ -43,7 +47,7 @@ export function NavbarComp() {
         <NavLink>
           <Navbar.Link href="#">All Classes</Navbar.Link>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/teacherForm'}>
           <Navbar.Link href="#">Teach on Acadmia</Navbar.Link>
         </NavLink>
         <NavLink to={'/dashboard'}>
