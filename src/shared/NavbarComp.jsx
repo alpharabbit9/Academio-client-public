@@ -18,15 +18,17 @@ export function NavbarComp() {
     <Navbar fluid rounded className="  w-full bg-opacity-50 bg-white ">
       <Navbar.Brand href="https://flowbite-react.com">
 
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Aca<span className="text-blue-800">demia</span></span>
+        <Link to={'/'}>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Aca<span className="text-blue-800">demia</span></span>
+        </Link>
       </Navbar.Brand>
       <div className="flex md:order-2">
         {
           user && user?.email ?
             <>
-             <img className="w-11 rounded-full mr-3" src={user?.photoURL} alt="" />
+              <img className="w-11 rounded-full mr-3" src={user?.photoURL} alt="" />
 
-              <Button onClick={() =>{
+              <Button onClick={() => {
                 userLogOut();
                 navigate('/')
               }}>Logout</Button>
@@ -44,7 +46,7 @@ export function NavbarComp() {
             Home
           </Navbar.Link>
         </NavLink>
-        <NavLink>
+        <NavLink to={'allClass'}>
           <Navbar.Link href="#">All Classes</Navbar.Link>
         </NavLink>
         <NavLink to={'/teacherForm'}>

@@ -16,6 +16,7 @@ import Users from '../Pages/Dashboard/Users';
 import AllAdminClasses from '../Pages/Dashboard/AllAdminClasses';
 import AdminProfile from '../Pages/Dashboard/AdminProfile';
 import TeacherForm from '../Pages/Home/TeacherForm';
+import AllClasses from '../Pages/All Classes/AllClasses';
 
 const Router = createBrowserRouter([
     {
@@ -35,9 +36,17 @@ const Router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path:'teacherForm',
-                element:<TeacherForm></TeacherForm>
-            }
+                path: 'teacherForm',
+                element: <PrivateRoute>
+                    <TeacherForm></TeacherForm>
+                </PrivateRoute>
+            },
+            {
+
+                path: 'allClass',
+                element: <AllClasses></AllClasses>
+
+            },
 
         ]
     },
@@ -46,47 +55,48 @@ const Router = createBrowserRouter([
         element: <PrivateRoute>
             <Dashboard></Dashboard>
         </PrivateRoute>,
-        children:[
+        children: [
             // Student
             {
-                path:'myEnrollClass',
-                element:<MyEnrollClass></MyEnrollClass>
+                path: 'myEnrollClass',
+                element: <MyEnrollClass></MyEnrollClass>
             },
             {
-                path:'myProfile',
-                element:<MyProfile></MyProfile>
+                path: 'myProfile',
+                element: <MyProfile></MyProfile>
             },
             // Teacher
             {
-                path:'addClass',
-                element:<AddClass></AddClass>
+                path: 'addClass',
+                element: <AddClass></AddClass>
             },
             {
-                path:'myClass',
-                element:<MyClass></MyClass>
+                path: 'myClass',
+                element: <MyClass></MyClass>
             },
             {
                 path: 'myTeacherProfile',
-                element:<MyTeacherProfile></MyTeacherProfile>
+                element: <MyTeacherProfile></MyTeacherProfile>
             },
 
+
             // Admin
-            
+
             {
-                path:'teacherRequests',
-                element:<TeacherRequests></TeacherRequests>
+                path: 'teacherRequests',
+                element: <TeacherRequests></TeacherRequests>
             },
             {
-                path:'users',
-                element:<Users></Users>
+                path: 'users',
+                element: <Users></Users>
             },
             {
-                path:'allClasses',
-                element:<AllAdminClasses></AllAdminClasses>
+                path: 'allClasses',
+                element: <AllAdminClasses></AllAdminClasses>
             },
             {
-                path:'adminProfile',
-                element:<AdminProfile></AdminProfile>
+                path: 'adminProfile',
+                element: <AdminProfile></AdminProfile>
             }
         ]
     }

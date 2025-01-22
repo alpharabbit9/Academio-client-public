@@ -42,9 +42,25 @@ const TeacherDashboard = () => {
                             My Profile
                         </NavLink>
                     </li>
+
+                    <div className="divider"></div>
+
+
+                    <li>
+                        <NavLink
+                            to={'/'}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? 'bg-blue-600 text-white px-4 py-2 block rounded'
+                                    : 'text-white px-4 py-2 block'
+                            }
+                        >
+                            Home
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
-            <div className='p-7'>
+            <div className='p-7 flex-1'>
                 <h2 className="text-5xl font-bold text-center">Teacher Dashboard</h2>
                 <div className="divider"></div>
                 <Outlet />

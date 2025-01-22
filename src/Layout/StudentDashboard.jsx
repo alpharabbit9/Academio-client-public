@@ -48,7 +48,7 @@ const StudentDashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className='p-7'>
+            <div className='p-7 flex-1'>
                 <h2 className="text-5xl font-bold text-center">Student Dashboard</h2>
                 <div className="divider"></div>
                 <Outlet />
