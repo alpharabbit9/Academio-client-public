@@ -17,6 +17,8 @@ import AllAdminClasses from '../Pages/Dashboard/AllAdminClasses';
 import AdminProfile from '../Pages/Dashboard/AdminProfile';
 import TeacherForm from '../Pages/Home/TeacherForm';
 import AllClasses from '../Pages/All Classes/AllClasses';
+import ClassDetailPage from '../Pages/All Classes/ClassDetailPage';
+import Payment from '../Components/Payment';
 
 const Router = createBrowserRouter([
     {
@@ -42,11 +44,23 @@ const Router = createBrowserRouter([
                 </PrivateRoute>
             },
             {
-
                 path: 'allClass',
                 element: <AllClasses></AllClasses>
-
             },
+            {
+                path: 'class/:id',
+                element: <PrivateRoute>
+                    <ClassDetailPage></ClassDetailPage>
+                </PrivateRoute>
+            },
+            {
+                path:'payment',
+                element:<PrivateRoute>
+
+                    <Payment></Payment>
+                </PrivateRoute>
+            },
+
 
         ]
     },
