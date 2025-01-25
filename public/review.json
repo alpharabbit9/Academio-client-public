@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "feedback": "This course was extremely helpful for me. I learned a lot.",
+        "name": "Riyad Hossain",
+        "image": "https://i.ibb.co.com/PYQHNNM/man-2.jpg",
+        "title": "Web Development Basics"
+    },
+    {
+        "id": 2,
+        "feedback": "The instructor explained complex topics in a very simple way.",
+        "name": "Samiul Islam",
+        "image": "https://i.ibb.co.com/PYQHNNM/man-2.jpg",
+        "title": "Introduction to JavaScript"
+    },
+    {
+        "id": 3,
+        "feedback": "The practical examples in this course were very effective.",
+        "name": "Tania Akter",
+        "image": "https://i.ibb.co.com/zQHTQSq/girl-1.webp",
+        "title": "Advanced CSS Techniques"
+    },
+    {
+        "id": 4,
+        "feedback": "The sessions were lively, and I learned many new things.",
+        "name": "Mahmudul Hasan",
+        "image": "https://i.ibb.co.com/gTS4Csg/455021471-1426497784614705-8153315976217041664-n.jpg",
+        "title": "Responsive Web Design"
+    },
+    {
+        "id": 5,
+        "feedback": "This course helped me develop professional skills.",
+        "name": "Sabrina Yasmin",
+        "image": "https://i.ibb.co.com/41w8QYK/girl-2.jpg",
+        "title": "Node.js Fundamentals"
+    },
+    {
+        "id": 6,
+        "feedback": "The projects were well-guided and helped me learn a lot.",
+        "name": "Imran Hossain",
+        "image": "https://i.ibb.co.com/fXSBnV8/462185253-2287085584958617-6674166413009060090-n.jpg",
+        "title": "MongoDB Database Management"
+    }
+]

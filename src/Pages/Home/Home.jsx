@@ -7,6 +7,7 @@ import JoinAsTeacher from './JoinAsTEacher';
 import DownloadApp from './DownloadApp';
 import Newsletter from './Newsletter';
 import HotCourses from './HotCourses';
+import FeedbackSection from './FeedbackSection';
 
 const Home = () => {
     return (
@@ -33,6 +34,12 @@ const Home = () => {
                     <p className='text-gray-600 mb-12'>Get instant access to top courses, real-time updates</p>
                 </div>
                 <DownloadApp></DownloadApp>
+            </section>
+
+            <section className='w-11/12 mx-auto mt-3 mb-3'>
+
+            <FeedbackSection></FeedbackSection>
+
             </section>
             <section>
                 <Newsletter></Newsletter>

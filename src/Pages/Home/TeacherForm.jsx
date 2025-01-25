@@ -26,6 +26,7 @@ const TeacherForm = () => {
     try {
       const response = await axiosSecure.post('/teacher-requests', requestData);
       alert(response.data.message);
+      
     } catch (error) {
       alert('Failed to submit request.');
       console.error('Submission error:', error.response?.data);

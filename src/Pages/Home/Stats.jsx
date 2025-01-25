@@ -1,11 +1,24 @@
 import React from 'react';
 import img from '../../assets/Partners/stat iamge.jpg'
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import { useQuery } from '@tanstack/react-query';
 
 const Stats = () => {
+
+
+    const axiosPublic = useAxiosPublic();
+
+    const {data : stats} = useQuery({
+        queryKey : ['stats'],
+        queryFn :async () =>{
+            const res = await axiosPublic.get('/stats');
+            return res.data ;
+        }
+    })
     // Replace these with actual values from your backend or state
-    const totalUsers = 12345;
-    const totalClasses = 250;
-    const totalEnrollments = 4567;
+    const totalUsers = 10;
+    const totalClasses = 7;
+    const totalEnrollments = 4;
 
     return (
         <section className="container mx-auto px-4 py-12">

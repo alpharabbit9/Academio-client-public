@@ -72,18 +72,20 @@ export function Register() {
       .then(res => {
         console.log(res.user);
         setUser(res.user);
-        navigate('/');
+        // navigate('/');
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(res => {
             const info = {
               name: name,
               email: email,
-              image: res.user?.photoURL,
+              image: photo
             };
+
+            console.log(info)
 
             // Store user in the database using axios
             axios
-              .post('http://localhost:5000/users', info)
+              .post('https://acadmia-server.vercel.app/users', info)
               .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {
